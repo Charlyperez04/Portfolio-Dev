@@ -11,25 +11,37 @@ const Form = () => {
         e.preventDefault();
         setIsSubmitting(true);
 
+        // Mostrar valores de entorno
+        console.log("Service ID:", import.meta.env.VITE_SERVICE_ID);
+        console.log("Template ID:", import.meta.env.VITE_TEMPLATE_ID);
+        console.log("Public Key:", import.meta.env.VITE_PUBLIC_KEY);
+
         emailjs
             .sendForm(
-                process.env.REACT_APP_SERVICE_ID as string,
-                process.env.REACT_APP_TEMPLATE_ID as string,
+                import.meta.env.VITE_SERVICE_ID as string,
+                import.meta.env.VITE_TEMPLATE_ID as string,
                 e.currentTarget,
-                process.env.REACT_APP_PUBLIC_KEY as string
+                import.meta.env.VITE_PUBLIC_KEY as string
             )
             .then(
-                () => {
+                (result) => {
+                    console.log("EmailJS success:", result.text);
                     setStateMessage("Message sent successfully!");
                     setIsSubmitting(false);
                     setTimeout(() => setStateMessage(null), 5000);
                 },
-                () => {
+                (error) => {
+                    console.error("EmailJS error:", error.text);
                     setStateMessage("Something went wrong, please try again later.");
                     setIsSubmitting(false);
                     setTimeout(() => setStateMessage(null), 5000);
                 }
-            );
+            )
+            .catch((err) => {
+                console.error("Unexpected error:", err);
+                setStateMessage("Unexpected error occurred.");
+                setIsSubmitting(false);
+            });
 
         e.currentTarget.reset();
     };
