@@ -1,6 +1,5 @@
 import { Mail } from "lucide-react"
 import { CARD_DATA } from "../../../CONSTANTS"
-import { TypeAnimation } from "react-type-animation"
 
 const Presentation = () => {
     return (
@@ -13,16 +12,10 @@ const Presentation = () => {
             <p className="text-primary font-ibm text-xs">&lt;h1&gt;</p>
 
             <p className="text-primary font-ibm text-xs mt-6">&lt;p&gt;</p>
-            <TypeAnimation className="font-ibm ml-4 my-2"
-                sequence={[
-                    CARD_DATA.description,
-                ]}
-                wrapper="p"
-                repeat={Infinity}
-                speed={70}
-                cursor
+            <p className="font-ibm ml-4 my-2"
             >
-            </TypeAnimation>
+                {CARD_DATA.description}
+            </p>
 
             <p className="text-primary font-ibm text-xs">&lt;p&gt;</p>
 
