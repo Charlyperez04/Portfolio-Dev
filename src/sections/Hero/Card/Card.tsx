@@ -20,7 +20,7 @@ const Card = () => {
                         <p className="font-ibm font-light">{item.value}</p>
                     </div>
                 ))}
-                <Button variant="secondary" onClick={() => window.location.href = CARD_DATA.cv} icon={<Download color="black" strokeWidth={1.5} />} className="mt-6">
+                <Button variant="secondary" onClick={() => window.open(CARD_DATA.cv, "_blank")} icon={<Download color="black" strokeWidth={1.5} />} className="mt-6">
                     Download CV
                 </Button>
             </div>

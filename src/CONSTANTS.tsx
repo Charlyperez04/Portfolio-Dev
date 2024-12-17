@@ -30,7 +30,7 @@ export const CARD_DATA = {
             value: 'Full-time / Freelance'
         }
     ],
-    cv: '',
+    cv: 'https://drive.google.com/file/d/1VFTivOkPZplHOqjCA1Waveb_stU9JDId/view?usp=sharing',
     description: "I help business grow by crafting amazing web experiences. If you're looking for a developer that likes to think outside the box, you're in the right place."
 }
 
