@@ -13,7 +13,7 @@ export const SOCIAL_MEDIA = {
 
 
 export const CARD_DATA = {
-    cardImgUrl: '/pics/developer-card.jpg',
+    cardImgUrl: '/pics/developer-card.png',
     name: 'Carlos Perez',
     role: 'Fullstack Developer',
     data: [

@@ -10,7 +10,7 @@ const Card = () => {
                 <img
                     src={CARD_DATA.cardImgUrl}
                     alt="Developer"
-                    className="w-20 h-20 mx-auto rounded-full border-primary border-[3px]"
+                    className="w-28 h-28 mx-auto rounded-full border-primary border-[3px]"
                 />
                 <p className="text-3xl pt-2 pb-1 font-ibm font-semibold">{CARD_DATA.name}</p>
                 <p className="font-ibm font-light mb-6">{CARD_DATA.role}</p>
